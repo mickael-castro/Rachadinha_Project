@@ -4,63 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_secundaria"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="Esqueleto do Vamos Rachar"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtConta"
+        android:layout_marginBottom="-30dp"
+        android:fontFamily="@font/bungee"
+        android:text="Rachadinha"
+        android:textColor="#FFE500"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_conta"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btFalar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/teal_700"
         android:onClick="clickFalar"
         android:text="Falar"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:icon="@android:drawable/ic_lock_silent_mode_off"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Share"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button4" />
+        app:layout_constraintTop_toTopOf="@+id/btn_Share" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/btn_Share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="83dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="208dp"
         android:clickable="true"
         android:importantForAccessibility="no"
+        app:backgroundTint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/pessoas_txt"
         app:srcCompat="?attr/actionModeShareDrawable" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:contentDescription="Compre suas cartas Pokemon"
-        android:onClick="clickFalar"
-        android:text="Comprar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btFalar"
-        app:layout_constraintTop_toBottomOf="@+id/edtConta" />
 
     <EditText
         android:id="@+id/edtConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="@font/alata"
         android:hint="Insira o valor da conta"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,5 +61,56 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pessoas_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="Insira seu grupo"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtConta" />
+
+    <TextView
+        android:id="@+id/txt_conta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/bungee"
+        android:text="0"
+        android:textColor="@color/teal_700"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edtConta"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/rachadinha" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/bungee"
+        android:text="R$:"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtConta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
